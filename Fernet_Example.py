@@ -1,7 +1,7 @@
 from cryptography.fernet import Fernet
 import os
 import socket
-
+import shutil
 
 
 Key = Fernet.generate_key()
@@ -13,6 +13,8 @@ Key1 = Fernet(Key)
 with open("TheSecretKey.txt", "w") as f:
     f.write(str(Key))
     f.close
+
+shutil.move('TheSecretKey.txt', '/Users/jaykeh/Downloads/TheSecretKey.txt')
 
 Input_Msg = input("What's The Message: ")
 Input_Msg_Enc = Input_Msg.encode("utf-8")
