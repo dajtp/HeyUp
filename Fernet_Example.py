@@ -7,6 +7,10 @@ Key = Fernet.generate_key()
 Key1 = Fernet(Key)
 #print(Key1)
 
+with open("TheSecretKey.txt", "w") as f:
+    f.write(str(Key))
+    f.close
+
 Input_Msg = input("What's The Message: ")
 Input_Msg_Enc = Input_Msg.encode("utf-8")
 
