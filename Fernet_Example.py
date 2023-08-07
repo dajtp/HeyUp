@@ -10,12 +10,14 @@ Key = Fernet.generate_key()
 Key1 = Fernet(Key)
 #print(Key1)
 
-with open("TheSecretKey.txt", "w") as f:
-    f.write(str(Key))
-    f.close
-    
-Key_Location = input("Where would you like to safely store your private key?: ")
-shutil.move('TheSecretKey.txt', Key_Location)
+def store_key(path, filename):
+    with open(filename, "w") as f:
+        f.write(str(Key))
+        f.close
+    shutil.move(filename, path)
+
+keypath = input("Where would you like to store your key?: ")
+store_key(keypath, "MyKey.txt")
 
 Input_Msg = input("What's The Message: ")
 Input_Msg_Enc = Input_Msg.encode("utf-8")
