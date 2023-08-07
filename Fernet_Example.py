@@ -17,8 +17,6 @@ with open("TheSecretKey.txt", "w") as f:
 Key_Location = input("Where would you like to safely store your private key?: ")
 shutil.move('TheSecretKey.txt', Key_Location)
 
-shutil.move('TheSecretKey.txt', '/Users/jaykeh/Downloads/TheSecretKey.txt')
-
 Input_Msg = input("What's The Message: ")
 Input_Msg_Enc = Input_Msg.encode("utf-8")
 
@@ -32,4 +30,3 @@ enc_token_file.close
 
 Dec_Token_Msg = Key1.decrypt(Token_Message)
 print(Dec_Token_Msg)
-
