@@ -17,6 +17,8 @@ with open("TheSecretKey.txt", "w") as f:
 Key_Location = input("Where would you like to safely store your private key?: ")
 shutil.move('TheSecretKey.txt', Key_Location)
 
+shutil.move('TheSecretKey.txt', '/Users/jaykeh/Downloads/TheSecretKey.txt')
+
 Input_Msg = input("What's The Message: ")
 Input_Msg_Enc = Input_Msg.encode("utf-8")
 
