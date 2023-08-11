@@ -1,0 +1,1 @@
+# This script needs to run in the background as a daemon, and will be responsible for receiving messages from the server and displaying them to the user.

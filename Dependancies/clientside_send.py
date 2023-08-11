@@ -1,0 +1,1 @@
+# This script will package up our encrypted messages and send them to the server.
