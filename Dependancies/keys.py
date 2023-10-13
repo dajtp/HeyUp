@@ -19,6 +19,7 @@ with open("public.pem", "wb") as f:
 Show = input("Would you like to see the keys? (Y/N): ")
 if Show == 'Y' or Show == 'y':
     print(Key.publickey().exportKey())
+    print("\n\n")
     print(Encrypted_Key)
 else:
     print("Keys Generated Successfully!")
