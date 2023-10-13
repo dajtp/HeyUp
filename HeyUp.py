@@ -4,6 +4,7 @@
 
 # Importing the required external libraries.
 import cryptography
+from Crypto.Hash import *
 import os
 import shutil
 import argparse
@@ -17,3 +18,6 @@ import configparser
 # Importing from internal Python Scripts.
 
 import Fernet_Example
+
+
+Hash = SHA512.new()
