@@ -23,12 +23,15 @@ import configparser
 config = configparser.ConfigParser()
 config.read('HeyUpConfig.ini')
 
-Server_IP = config['IP']['Server_IP']
-Server_Port = config['PORT']['Server_Port']
+Server_IP = config['SERVER_CREDS']['Server_IP']
+Server_Port = config['SERVER_CREDS']['Server_Port']
+HeyUp_User = config['SERVER_CREDS']['Server_User']
+HeyUp_Pass = config['SERVER_CREDS']['Server_Pass']
 
 print(Server_IP)
 print(Server_Port)
-
+print(HeyUp_User)
+print(HeyUp_Pass)
 
 
 
