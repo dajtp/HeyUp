@@ -4,7 +4,7 @@
 
 # Importing the required external libraries.
 import cryptography
-from Crypto.Hash import *
+#from Crypto.Hash import *
 import os
 import shutil
 import argparse
@@ -17,7 +17,18 @@ import configparser
 
 # Importing from internal Python Scripts.
 
-import Fernet_Example
+#import Fernet_Example
+#import Build_Config
+
+config = configparser.ConfigParser()
+config.read('HeyUpConfig.ini')
+
+Server_IP = config['IP']['Server_IP']
+Server_Port = config['PORT']['Server_Port']
+
+print(Server_IP)
+print(Server_Port)
 
 
-Hash = SHA512.new()
+
+
