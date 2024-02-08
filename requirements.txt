@@ -1,0 +1,6 @@
+cryptography
+argparse
+tcppinglib
+threading
+configparser
+socketserver
